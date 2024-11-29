@@ -2,8 +2,6 @@
 
 Die **Adventskalender App** ist eine unterhaltsame Android-Anwendung, die den Countdown bis Weihnachten interaktiv gestaltet. Mit 24 Türchen, von denen jedes eine kleine Überraschung bietet, ist sie die ideale App für die Adventszeit.
 
----
-
 ## Features
 
 - **Interaktiver Adventskalender**:
@@ -16,8 +14,6 @@ Die **Adventskalender App** ist eine unterhaltsame Android-Anwendung, die den Co
 - **Ansprechendes Design**:
   - Benutzerfreundliche Oberfläche mit interaktiven Stern-Symbolen.
 
----
-
 ## Installation
 
 1. **APK-Download**:
@@ -27,8 +23,6 @@ Die **Adventskalender App** ist eine unterhaltsame Android-Anwendung, die den Co
 3. **Projekt-Ausführung**:
    - Öffne das Projekt in Android Studio, um es auf einem Emulator oder einem Gerät auszuführen.
 
----
-
 ## Benutzung
 
 1. **Türchen öffnen**:
@@ -37,14 +31,3 @@ Die **Adventskalender App** ist eine unterhaltsame Android-Anwendung, die den Co
    - Erhalte Informationen darüber, wie viele Tage noch bis zur Öffnung des Türchens verbleiben.
 3. **Festliche Überraschung am 24. Dezember**:
    - Freue dich auf eine musikalische Überraschung, wenn du das letzte Türchen öffnest.
-
----
-
-## Technologie-Stack
-
-- **Programmiersprache**: Kotlin
-- **Benutzeroberfläche**: XML mit Material Design
-- **Audio-Management**: Android MediaPlayer
-- **Interaktive Elemente**: Dynamische IDs und ClickListener für Stern-Symbole
-
----
