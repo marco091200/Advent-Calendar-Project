@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/adventskalender_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hintergrund_adventskalender"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Star 0 - Oberer Stern (Top) -->
+    <TextView
+        android:id="@+id/star_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/star_top"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Star 1 - Oberer Stern -->
+    <TextView
+        android:id="@+id/star_1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/star_shape"
+        android:backgroundTint="@color/purple"
+        android:gravity="center"
+        android:text="1"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:fontFamily="@font/libre_baskerville"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Haupt-ConstraintLayout, das die Sterne hält -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_group_row_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_1"
+        android:layout_marginTop="0dp">
+
+        <!-- Erster Stern der Gruppe -->
+        <TextView
+            android:id="@+id/star_13"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="13"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Zweiter Stern in der Gruppe rechts von star_13 -->
+        <TextView
+            android:id="@+id/star_3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/beige"
+            android:gravity="center"
+            android:text="3"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_13"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Container für die drei Sterne in der Reihe -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_group_row_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_1"
+        android:layout_marginTop="60dp">
+
+        <!-- Stern 2 - links in der Reihe -->
+        <TextView
+            android:id="@+id/star_2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/pink"
+            android:gravity="center"
+            android:text="2"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Stern 17 - zentral in der Reihe -->
+        <TextView
+            android:id="@+id/star_17"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+            android:text="17"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_2"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Stern 9 - rechts in der Reihe -->
+        <TextView
+            android:id="@+id/star_9"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="9"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_17"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Kalender Text am unteren Rand -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/libre_baskerville"
+        android:text="@string/kalender"
+        android:textColor="@color/beige"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container für die vier Sterne in der dritte Reihe -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_group_row_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_1"
+        android:layout_marginTop="120dp">
+
+        <!-- Stern 19 - Linker Stern in der Reihe -->
+        <TextView
+            android:id="@+id/star_19"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="19"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Stern 14 - Zweiter Stern in der Reihe -->
+        <TextView
+            android:id="@+id/star_14"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+            android:text="14"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_19"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Stern 4 - Dritter Stern in der Reihe -->
+        <TextView
+            android:id="@+id/star_4"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/pink"
+            android:gravity="center"
+            android:text="4"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_14"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Stern 16 - Rechter Stern in der Reihe -->
+        <TextView
+            android:id="@+id/star_16"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/beige"
+            android:gravity="center"
+            android:text="16"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_group_row_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_1"
+        android:layout_marginTop="180dp">
+
+        <!-- Star 5 - Linker Stern in der fünften Reihe -->
+        <TextView
+            android:id="@+id/star_5"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+            android:text="5"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 10 - Zweiter Stern in der fünften Reihe -->
+        <TextView
+            android:id="@+id/star_10"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/beige"
+            android:gravity="center"
+            android:text="10"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_5"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 20 - Dritter Stern in der fünften Reihe -->
+        <TextView
+            android:id="@+id/star_20"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/pink"
+            android:gravity="center"
+            android:text="20"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_10"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 24 - Vierter Stern in der fünften Reihe -->
+        <TextView
+            android:id="@+id/star_24"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="24"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_20"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 22 - Rechter Stern in der fünften Reihe -->
+        <TextView
+            android:id="@+id/star_22"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+            android:text="22"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_24"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_group_row_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_1"
+        android:layout_marginTop="240dp">
+
+        <!-- Star 7 - Linker Stern in der sechsten Reihe -->
+        <TextView
+            android:id="@+id/star_7"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/pink"
+            android:gravity="center"
+            android:text="7"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 15 - Zweiter Stern in der sechsten Reihe -->
+        <TextView
+            android:id="@+id/star_15"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="15"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_7"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 6 - Dritter Stern in der sechsten Reihe -->
+        <TextView
+            android:id="@+id/star_6"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+            android:text="6"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_15"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 18 - Vierter Stern in der sechsten Reihe -->
+        <TextView
+            android:id="@+id/star_18"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/beige"
+            android:gravity="center"
+            android:text="18"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_6"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 8 - Fünfter Stern in der sechsten Reihe -->
+        <TextView
+            android:id="@+id/star_8"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/pink"
+            android:gravity="center"
+            android:text="8"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_18"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <!-- Star 12 - Rechter Stern in der sechsten Reihe -->
+        <TextView
+            android:id="@+id/star_12"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="12"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_8"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/star_group_row_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_1"
+        android:layout_marginTop="300dp"
+        app:layout_constraintHorizontal_chainStyle="packed">
+
+        <!-- Star 11 - Linker Stern in der siebten Reihe -->
+        <TextView
+            android:id="@+id/star_11"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/pink"
+            android:gravity="center"
+            android:text="11"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="0dp" />
+
+        <!-- Star 23 - Zweiter Stern in der siebten Reihe -->
+        <TextView
+            android:id="@+id/star_23"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/red"
+            android:gravity="center"
+            android:text="23"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_11"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="0dp" />
+
+        <!-- Star 21 - Rechter Stern in der siebten Reihe -->
+        <TextView
+            android:id="@+id/star_21"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/star_shape"
+            android:backgroundTint="@color/purple"
+            android:gravity="center"
+            android:text="21"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/star_23"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
